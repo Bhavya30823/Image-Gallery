@@ -1,0 +1,11 @@
+C:\Users\ASUS\source\repos\bhavya\obj\Debug\bhavya.vbprojAssemblyReference.cache
+C:\Users\ASUS\source\repos\bhavya\obj\Debug\bhavya.Form1.resources
+C:\Users\ASUS\source\repos\bhavya\obj\Debug\bhavya.Resources.resources
+C:\Users\ASUS\source\repos\bhavya\obj\Debug\bhavya.vbproj.GenerateResource.cache
+C:\Users\ASUS\source\repos\bhavya\bin\Debug\bhavya.exe.config
+C:\Users\ASUS\source\repos\bhavya\bin\Debug\bhavya.exe
+C:\Users\ASUS\source\repos\bhavya\bin\Debug\bhavya.pdb
+C:\Users\ASUS\source\repos\bhavya\bin\Debug\bhavya.xml
+C:\Users\ASUS\source\repos\bhavya\obj\Debug\bhavya.exe
+C:\Users\ASUS\source\repos\bhavya\obj\Debug\bhavya.xml
+C:\Users\ASUS\source\repos\bhavya\obj\Debug\bhavya.pdb
