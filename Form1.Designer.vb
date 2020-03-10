@@ -23,9 +23,9 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.SHOW = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.loading_button = New System.Windows.Forms.Button()
+        Me.next_image = New System.Windows.Forms.Button()
+        Me.previous_button = New System.Windows.Forms.Button()
         CType(Me.SHOW, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -38,41 +38,41 @@ Partial Class Form1
         Me.SHOW.TabIndex = 0
         Me.SHOW.TabStop = False
         '
-        'Button1
+        'loading_button
         '
-        Me.Button1.Location = New System.Drawing.Point(58, 421)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "show"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.loading_button.Location = New System.Drawing.Point(58, 421)
+        Me.loading_button.Name = "loading_button"
+        Me.loading_button.Size = New System.Drawing.Size(75, 23)
+        Me.loading_button.TabIndex = 1
+        Me.loading_button.Text = "Load"
+        Me.loading_button.UseVisualStyleBackColor = True
         '
-        'Button2
+        'next_image
         '
-        Me.Button2.Location = New System.Drawing.Point(243, 421)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "next"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.next_image.Location = New System.Drawing.Point(243, 421)
+        Me.next_image.Name = "next_image"
+        Me.next_image.Size = New System.Drawing.Size(75, 23)
+        Me.next_image.TabIndex = 2
+        Me.next_image.Text = "Next"
+        Me.next_image.UseVisualStyleBackColor = True
         '
-        'Button3
+        'previous_button
         '
-        Me.Button3.Location = New System.Drawing.Point(403, 421)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "prev"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.previous_button.Location = New System.Drawing.Point(403, 421)
+        Me.previous_button.Name = "previous_button"
+        Me.previous_button.Size = New System.Drawing.Size(75, 23)
+        Me.previous_button.TabIndex = 3
+        Me.previous_button.Text = "Prev"
+        Me.previous_button.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.previous_button)
+        Me.Controls.Add(Me.next_image)
+        Me.Controls.Add(Me.loading_button)
         Me.Controls.Add(Me.SHOW)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -82,7 +82,7 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents SHOW As PictureBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents loading_button As Button
+    Friend WithEvents next_image As Button
+    Friend WithEvents previous_button As Button
 End Class

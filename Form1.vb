@@ -4,13 +4,13 @@ Imports System.Drawing.Imaging
 
 Public Class Form1
     Dim no_images As Integer = 0
-    Dim a As Integer = 0
-    Dim directoryName As String
 
+    Dim directoryName As String
+    Dim a As Integer = 0S
     Dim files() As String
     Dim extension As String
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles loading_button.Click
         Dim gallery() As String
         directoryName = "C:\Users\ASUS\Pictures\Screenshots"
         gallery = Directory.GetFiles(directoryName)
@@ -35,15 +35,15 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles next_image.Click
         a = a + 1
-        If a = 4 Then
+        If a = no_images Then
             MessageBox.Show("khatam")
-            End
+            a = a - 1
+
         End If
-        directoryName = "C:\Users\ASUS\Pictures\Screenshots.txt"
-        gallery = Directory.GetFiles(directoryName)
-        Dim strfilename As String = gallery(a)
+
+        Dim strfilename As String = files(a)
         Dim bhavya As Image
         bhavya = Image.FromFile(strfilename)
         SHOW.Image = bhavya
@@ -51,15 +51,14 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim gallery(4) As String
-        gallery = New String() {"F:\UDAIPUR\IMG_20191220_050124.jpg", "F:\UDAIPUR\IMG_20191220_050131.jpg", "F:\UDAIPUR\IMG_20191220_064200.jpg", "F:\UDAIPUR\IMG_20191220_064203.jpg"}
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles previous_button.Click
+
         If a = 0 Then
             MessageBox.Show("you are on the 1st picture")
             a = a + 1
         End If
         a = a - 1
-        Dim strfilename As String = gallery(a)
+        Dim strfilename As String = files(a)
         Dim bhavya As Image
         bhavya = Image.FromFile(strfilename)
         SHOW.Image = bhavya
