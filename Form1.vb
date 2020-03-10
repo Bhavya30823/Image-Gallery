@@ -1,17 +1,37 @@
 ﻿
-Public Class Form1
-    Dim a As Integer = 0
+Imports System.IO
+Imports System.Drawing.Imaging
 
+Public Class Form1
+    Dim no_images As Integer = 0
+    Dim a As Integer = 0
+    Dim directoryName As String
+
+    Dim files() As String
+    Dim extension As String
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim gallery() As String
+        directoryName = "C:\Users\ASUS\Pictures\Screenshots"
+        gallery = Directory.GetFiles(directoryName)
+        For Each file As String In gallery
 
-        Dim gallery(4) As String
-        gallery = New String() {"F:\UDAIPUR\IMG_20191220_050124.jpg", "F:\UDAIPUR\IMG_20191220_050131.jpg", "F:\UDAIPUR\IMG_20191220_064200.jpg", "F:\UDAIPUR\IMG_20191220_064203.jpg"}
-        Dim strfilename As String = gallery(0)
+            extension = Path.GetExtension(file)
+
+            If (extension = ".jpg" Or extension = ".jpeg" Or extension = ".png" Or extension = ".gif" Or extension = ".ico") Then
+                ReDim Preserve files(no_images)
+                files(no_images) = file
+                no_images += 1
+            End If
+        Next
+        If (no_images = 0) Then
+            MessageBox.Show("There are no image files in this directory")
+            Exit Sub
+        End If
+        Dim strfilename As String = files(0)
         Dim bhavya As Image
         bhavya = Image.FromFile(strfilename)
         SHOW.Image = bhavya
-
 
     End Sub
 
@@ -21,8 +41,8 @@ Public Class Form1
             MessageBox.Show("khatam")
             End
         End If
-        Dim gallery(4) As String
-        gallery = New String() {"F:\UDAIPUR\IMG_20191220_050124.jpg", "F:\UDAIPUR\IMG_20191220_050131.jpg", "F:\UDAIPUR\IMG_20191220_064200.jpg", "F:\UDAIPUR\IMG_20191220_064203.jpg"}
+        directoryName = "C:\Users\ASUS\Pictures\Screenshots.txt"
+        gallery = Directory.GetFiles(directoryName)
         Dim strfilename As String = gallery(a)
         Dim bhavya As Image
         bhavya = Image.FromFile(strfilename)
